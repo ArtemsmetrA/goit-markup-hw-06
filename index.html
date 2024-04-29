@@ -15,21 +15,40 @@
             <div class="container header-container">
                 <nav class="header-nav">
                     <a href="./index.html" class="header-logo">Web<span class="accent">Studio</span></a>
+                    
+                <!--section only for tablet and descktop-->
                     <ul class="header-menu-list">
                         <li class="header-menu-item"><a class="header-menu-link current" href="./index.html">Studio</a></li>
                         <li class="header-menu-item"><a class="header-menu-link" href="">Portfolio</a></li>
                         <li class="header-menu-item"><a class="header-menu-link" href="">Contacts</a></li>
                     </ul>
                 </nav>
+                <!------------------------------------->
+                <!--section only for tablet and descktop-->
                 <address class="address">
                     <ul class="header-cont-list">
                         <li class="header-cont-item"><a class="header-cont-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                         <li class="header-cont-item"><a class="header-cont-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                     </ul>
                 </address>
+                <!------------------------------------->
+                <!--humburger for mobile version-->
+                <button class="menu-button" type="button">
+                    <svg class="menu-icon" width="24" height="24">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
+                <!------------------------------------->
             </div>
         </header>
         <main>
+            <!-- banner -->
+            <section class="section banner">
+                <div class="container">
+                    <h1 class="title-banner">Effective Solutions for Your Business</h1>
+                    <button class="button-banner" type="button">Order Service</button>
+                </div>
+            </section>
             <section class="hero">
                 <div class="container">
                     <h1 class="hero-title">Effective Solutions for Your Business</h1>
@@ -83,7 +102,7 @@
                 </div>
             </section>
             <section class="team">
-                <div class="container">
+                <div class="container container-our-team">
                     <h2 class="team-title">Our Team</h2>
                     <ul class="team-menu">
                         <li class="team-menu-list">
@@ -306,69 +325,71 @@
             </section>
         </main>
         <footer class="footer">
-            <div class="container">
-                <div class="logo-text-wrap">
-                    <a class="footer-logo" href="./index.html">Web<span class="accent-footer">Studio</span></a>
-                    <p class="footer-text">
-                        Increase the flow of customers and sales for your business with digital marketing & growth solutions.
-                    </p>
-                </div>
-                <div class="social-wrap">
-                    <p class="social-title">Social media</p>
-                    <ul class="icon-list-footer">
-                        <li class="icon-item-footer">
-                            <a href="" class="icon-link-footer">
-                                <svg class="icon-icon-footer" width="24" height="24">
-                                    <use href="./images/icons.svg#icon-instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="icon-item-footer">
-                            <a href="" class="icon-link-footer">
-                                <svg class="icon-icon-footer" width="24" height="24">
-                                    <use href="./images/icons.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="icon-item-footer">
-                            <a href="" class="icon-link-footer">
-                                <svg class="icon-icon-footer" width="24" height="24">
-                                    <use href="./images/icons.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="icon-item-footer">
-                            <a href="" class="icon-link-footer">
-                                <svg class="icon-icon-footer" width="24" height="24">
-                                    <use href="./images/icons.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-email">
-                    <p class="form-tittle">Subscribe</p>
-                <form class="footer-form">
-                    <label class="subscribe">
-                        <input
-                        type="email"
-                        placeholder="E-mail"
-                        name="subscribe-telegram"
-                        id="subscribe"
-                        class="footer-input"
-                        />
-                    </label>
-                    <button type="submit" class="footer-btn">
-                        Subscribe
-                        <svg class="footer-btn-icon" width="24" height="24">
-                            <use href="./images/icons.svg#icon-telegram"></use>
-                        </svg>
-                    </button>
-                </form>
+            <div class="container container-footer">
+                <div class="container-logo-and-social">
+                    <div class="logo-text-wrap">
+                        <a class="footer-logo" href="./index.html">Web<span class="accent-footer">Studio</span></a>
+                        <p class="footer-text">
+                            Increase the flow of customers and sales for your business with digital marketing & growth solutions.
+                        </p>
+                    </div>
+                    <div class="social-wrap">
+                        <p class="social-title">Social media</p>
+                        <ul class="icon-list-footer">
+                            <li class="icon-item-footer">
+                                <a href="" class="icon-link-footer">
+                                    <svg class="icon-icon-footer" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="icon-item-footer">
+                                <a href="" class="icon-link-footer">
+                                    <svg class="icon-icon-footer" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="icon-item-footer">
+                                <a href="" class="icon-link-footer">
+                                    <svg class="icon-icon-footer" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="icon-item-footer">
+                                <a href="" class="icon-link-footer">
+                                    <svg class="icon-icon-footer" width="24" height="24">
+                                        <use href="./images/icons.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-email">
+                        <p class="form-tittle">Subscribe</p>
+                    <form class="footer-form">
+                        <label class="subscribe">
+                            <input
+                            type="email"
+                            placeholder="E-mail"
+                            name="subscribe-telegram"
+                            id="subscribe"
+                            class="footer-input"
+                            />
+                        </label>
+                        <button type="submit" class="footer-btn">
+                            Subscribe
+                            <svg class="footer-btn-icon" width="24" height="24">
+                                <use href="./images/icons.svg#icon-telegram"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    </div>
                 </div>
             </div>
         </footer>
-        <div class="backdrop is-open">
+        <div class="backdrop is-ope modal-overlay">
             <div class="model">
                 <button class="model-btn-close" type="button">
                 <svg class="icon-close" width="8" height="8">
