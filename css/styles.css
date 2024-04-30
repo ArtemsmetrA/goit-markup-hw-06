@@ -505,6 +505,7 @@ img {
 }
 
 .icon-list {
+    display: flex;
     justify-content: center;
     gap: 24px;
 }
@@ -945,18 +946,16 @@ img {
 
 .model {
     position: absolute;
+    background: #fcfcfc;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 288px;
+    padding: 72px 16px 24px 16px;
+    min-height: 623px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     top: 50%;
     left: 50%;
-    width: 408px;
-    min-height: 584px;
-    background-color: #fcfcfc;
-    border-radius: 4px;
-    transform:translate(-50%, -50%);
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
-    0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    padding: 72px 24px 24px 24px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
+    transform: translate(-50%, -50%);
 }
 
 .backdrop.is-open {
@@ -1059,7 +1058,8 @@ img {
 
 .input {
     position: relative;
-    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .input-icon {
@@ -1085,20 +1085,19 @@ img {
 }
 
 .model-text {
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    width: 360px;
+    width: 256px;
     height: 120px;
     resize: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
     padding: 8px 16px;
-    font-weight: 400;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
     background-color: transparent;
-    outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .model-text .model-input {
@@ -1124,23 +1123,29 @@ img {
 }
 
 .model-accent {
+    position: relative;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    fill: transparent;
+    justify-content: center;
     width: 16px;
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    vertical-align: sub;
     margin-right: 8px;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .police-link {
     margin-left: 4px;
     color: #4D5AE5;
+    line-height: 1.33;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-transform: capitalize;
+    color: #4d5ae5;
 }
 
 .model-btn-send {
@@ -1168,4 +1173,179 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.cube-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (min-width: 768px) {
+    .model {
+        width: 408px;
+        min-height: 584px;
+    }
+
+    .model-text {
+        width: 360px;
+        height: 120px;
+    }
+
+    .model-form {
+        align-items: center;
+        justify-content: center;
+    }
+}
+/*----------------------*/
+/*----------FORM MOBILE------------*/
+.modal-overlay-mobile-menu {
+    position: relative;
+    background-color: #fff;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 16px;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-overlay-mobile-menu.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.close-modal-mobile-menu {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #e7e9fc;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal-mobile-menu:hover,
+.close-modal-mobile-menu:focus {
+    background-color: #404bbf;
+    border: none;
+}
+
+.icon-close-modal {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-modal-mobile-menu:hover .icon-close-modal,
+.close-modal-mobile-menu:focus .icon-close-modal {
+    fill: #fff;
+  }
+  
+  .list-nav-mobile {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .container-menu-mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .list-nav-item-mobile .link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .list-nav-item-mobile .studio {
+    color: #404bbf;
+  }
+  
+  .list-nav-item-mobile:hover .link,
+  .list-nav-item-mobile:focus .link {
+    color: #404bbf;
+  }
+  
+  .header-contact-mobile {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+    font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .header-contact-mobile:hover,
+  .header-contact-mobile:focus {
+    color: #404bbf;
+  }
+  
+  .header-address-mobile .telephone {
+    color: #404bbf;
+  }
+  
+  .nav-mobile {
+    margin-bottom: auto;
+  }
+  
+  .header-address-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .header-address-mobile {
+    margin-bottom: 48px;
+  }
+  
+  .container-social-link-mobile {
+    flex-direction: row;
+    gap: 40px;
+    max-width: 320px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-social-link-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-link-list-mobile .link {
+    width: 40px;
+    height: 40px;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .social-link-list-mobile .icon {
+    fill: #f4f4fd;
+  }
+  
+  .social-link-list-mobile .link:hover,
+  .social-link-list-mobile .link:focus {
+    background-color: #31d0aa;
+  }
 /*----------------------*/
